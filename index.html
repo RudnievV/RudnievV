@@ -1,1 +1,332 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Pie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="min-h-full">
+    <header class="bg-indigo-600 pb-24">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="relative flex items-center justify-center py-5 lg:justify-between">
+                <!-- Logo -->
+                <div class="absolute left-0 flex-shrink-0 lg:static">
+                    <a href="#">
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300" alt="Your Company">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="-mt-24 pb-8">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <!-- Main 3 column grid -->
+            <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8">
+                <!-- Left column -->
+                <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+                    <section aria-labelledby="section-1-title">
+                        <div class="overflow-hidden rounded-lg bg-white shadow">
+                            <div class="p-6">
+
+
+                                <nav class="flex mb-5" aria-label="Breadcrumb">
+                                    <ol role="list" class="flex space-x-4 rounded-md bg-white px-6 shadow">
+                                        <li class="flex">
+                                            <div class="flex items-center">
+                                                <a href="#" class="text-gray-800 hover:text-gray-600">
+                                                    <!-- Heroicon name: mini/home -->
+                                                    <svg class="h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <li class="flex">
+                                            <div class="flex items-center">
+                                                <svg class="h-full w-6 flex-shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                                                </svg>
+                                                <a href="#" class="ml-4 text-sm font-medium text-gray-800 hover:text-gray-600">Pie</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="flex">
+                                            <div class="flex items-center">
+                                                <svg class="h-full w-6 flex-shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                                                </svg>
+                                                <a href="#" class="ml-4 text-sm font-medium text-indigo-700 hover:text-indigo-500" aria-current="page">Week</a>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </nav>
+
+                                <div>
+                                    <canvas id="weekPie"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="section-1-title">
+                        <div class="overflow-hidden rounded-lg bg-white shadow">
+                            <div class="p-6">
+
+                                <nav class="flex mb-5" aria-label="Breadcrumb">
+                                    <ol role="list" class="flex space-x-4 rounded-md bg-white px-6 shadow">
+                                        <li class="flex">
+                                            <div class="flex items-center">
+                                                <a href="#" class="text-gray-800 hover:text-gray-600">
+                                                    <!-- Heroicon name: mini/home -->
+                                                    <svg class="h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <li class="flex">
+                                            <div class="flex items-center">
+                                                <svg class="h-full w-6 flex-shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                                                </svg>
+                                                <a href="#" class="ml-4 text-sm font-medium text-gray-800 hover:text-gray-600">Pie</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="flex">
+                                            <div class="flex items-center">
+                                                <svg class="h-full w-6 flex-shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                                                </svg>
+                                                <a href="#" class="ml-4 text-sm font-medium text-indigo-700 hover:text-indigo-500" aria-current="page">Day</a>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </nav>
+
+                                <div>
+                                    <canvas id="dayPie"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right column -->
+                <div class="grid grid-cols-1 gap-4">
+                    <section aria-labelledby="section-2-title">
+                        <h2 class="sr-only" id="section-2-title">Section title</h2>
+                        <div class="overflow-hidden rounded-lg bg-white shadow">
+                            <div class="p-6">
+
+                                <div class="mx-auto max-w-3xl px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8 mb-5">
+                                    <div class="flex items-center space-x-5">
+                                        <div class="flex-shrink-0">
+                                            <div class="relative">
+                                                <img class="h-16 w-16 rounded-full" src="/img/Tetiana.jpg" alt="">
+                                                <span class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h1 class="text-2xl font-bold text-gray-900">Tetiana Kukharenko</h1>
+                                            <p class="text-sm font-medium text-gray-500">The best teacher</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mx-auto max-w-3xl px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8 mb-5">
+                                    <div class="flex items-center space-x-5">
+                                        <div class="flex-shrink-0">
+                                            <div class="relative">
+                                                <img class="h-16 w-16 rounded-full" src="/img/I.png" alt="">
+                                                <span class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h1 class="text-2xl font-bold text-gray-900">Slava Rudnev</h1>
+                                            <p class="text-sm font-medium text-gray-500">Student of ABCloudz English class</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mx-auto mt-8 max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
+                                    <h2 class="text-sm font-medium text-gray-500">Team members</h2>
+                                    <div class="mt-1 grid grid-cols-1 gap-4">
+
+                                        <div class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-2 hover:border-gray-400">
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="/img/Aleksandra.png" alt="">
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <a href="#" class="focus:outline-none">
+                                                    <span class="absolute inset-0" aria-hidden="true"></span>
+                                                    <p class="text-sm font-medium text-gray-900">Aleksandra Volina</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-2 hover:border-gray-400">
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="/img/Anna.png" alt="">
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <a href="#" class="focus:outline-none">
+                                                    <span class="absolute inset-0" aria-hidden="true"></span>
+                                                    <p class="text-sm font-medium text-gray-900">Anna Bibyk</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-2 hover:border-gray-400">
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="/img/Liza.png" alt="">
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <a href="#" class="focus:outline-none">
+                                                    <span class="absolute inset-0" aria-hidden="true"></span>
+                                                    <p class="text-sm font-medium text-gray-900">Liza Lemishenko</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-2 hover:border-gray-400">
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="/img/unknown.png" alt="">
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <a href="#" class="focus:outline-none">
+                                                    <span class="absolute inset-0" aria-hidden="true"></span>
+                                                    <p class="text-sm font-medium text-gray-900">Oleksii Yerokhin</p>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-pink-500 focus-within:ring-offset-2 hover:border-gray-400">
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="/img/Yuliia.png" alt="">
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <a href="#" class="focus:outline-none">
+                                                    <span class="absolute inset-0" aria-hidden="true"></span>
+                                                    <p class="text-sm font-medium text-gray-900">Yuliia Medak</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 sm:text-left"><span class="block sm:inline">&copy; 2022 Pie Company, Inc.</span> <span class="block sm:inline">All rights reserved.</span></div>
+        </div>
+    </footer>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const dataWeek = {
+    labels: [
+      'Monday - recharging after chill out',
+      'Tuesday - switch off to work',
+      'Wednesday - work',
+      'Thursday - switch off after work',
+      'Friday - recharging after work',
+      'Saturday - chill out',
+      'Sunday - chill out'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [80, 60, 20, 60, 80 , 100, 100],
+      backgroundColor: [
+        '#373e98',
+        '#f16775',
+        '#A0AECD',
+        '#ceb92c',
+        '#fee36e',
+        '#D6A3FB',
+        '#ABF62D'
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+  const configWeek = {
+    type: 'pie',
+    data: dataWeek,
+    options: {
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  };
+
+  new Chart(
+    document.getElementById('weekPie'),
+    configWeek
+  );
+
+  const dataDay = {
+    labels: [
+      'Monday - recharging after chill out',
+      'Tuesday - switch off to work',
+      'Wednesday - work',
+      'Thursday - switch off after work',
+      'Friday - recharging after work',
+      'Saturday - chill out',
+      'Sunday - chill out'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [80, 60, 20, 60, 80 , 100, 100],
+      backgroundColor: [
+        '#373e98',
+        '#f16775',
+        '#A0AECD',
+        '#ceb92c',
+        '#fee36e',
+        '#D6A3FB',
+        '#ABF62D'
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+  const configDay = {
+    type: 'pie',
+    data: dataWeek,
+    options: {
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  };
+
+  new Chart(
+    document.getElementById('dayPie'),
+    configDay
+  );
+</script>
+
+</body>
+</html>
